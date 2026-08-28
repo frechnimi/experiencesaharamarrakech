@@ -85,7 +85,7 @@ const INITIAL_SERVICES_DATA = [
     rating: 5.0,
     reviewsCount: 198,
     status: "active",
-    image: "assets/fire_show.jpg",
+    image: "assets/photo4.jpg",
     badge: {
       fr: "Coup de Cœur",
       en: "Best-Seller",
@@ -175,7 +175,7 @@ const INITIAL_SERVICES_DATA = [
     rating: 4.9,
     reviewsCount: 110,
     status: "active",
-    image: "assets/luxury_riad.jpg",
+    image: "assets/photo5.jpg",
     badge: {
       fr: "Panoramique",
       en: "Scenic Views",
@@ -220,7 +220,7 @@ const INITIAL_SERVICES_DATA = [
     rating: 5.0,
     reviewsCount: 215,
     status: "active",
-    image: "assets/essaouira_boats.jpg",
+    image: "assets/photo3.jpg",
     badge: {
       fr: "Bord de Mer",
       en: "Coastal Jewel",
@@ -310,7 +310,7 @@ const INITIAL_SERVICES_DATA = [
     rating: 5.0,
     reviewsCount: 64,
     status: "active",
-    image: "assets/coastal_tower.jpg",
+    image: "assets/photo2.jpg",
     badge: {
       fr: "Authentique & Sauvage",
       en: "Wild Mountain Adventure",
@@ -365,7 +365,7 @@ const INITIAL_SERVICES_DATA = [
       es: "Pack Chófer",
       ar: "سيارة وسائق"
     },
-    image: "assets/fire_show.jpg",
+    image: "assets/photo4.jpg",
     overview: {
       fr: "Formule globale Véhicule Privé + Chauffeur professionnel dédié (hébergement libre ou selon vos souhaits).\n\n• Jour 1 : Marrakech – Col Tizi n'Tichka – Kasbah Aït Ben Haddou – Ouarzazate – Vallée du Draa – Arrivée à Zagora, balade à dos de dromadaire pour le coucher de soleil et nuitée dans le désert de Zagora.\n• Jour 2 : Lever de soleil sur les dunes de Zagora – Agdz – Ouarzazate – Traversée du Haut Atlas – Retour à Marrakech en soirée.",
       en: "Private Vehicle + Dedicated Professional Driver package (accommodation not included / flexible).\n\n• Day 1: Marrakech – Tizi n'Tichka – Ait Ben Haddou – Ouarzazate – Draa Valley – Zagora sunset camel trek and desert night.\n• Day 2: Zagora sunrise – Agdz – Ouarzazate – High Atlas – Return to Marrakech.",
@@ -463,7 +463,7 @@ const INITIAL_SERVICES_DATA = [
       es: "Autovía Directa",
       ar: "طريق سيار مباشر"
     },
-    image: "assets/beach_horse_camel.jpg",
+    image: "assets/photo1.jpg",
     overview: {
       fr: "Liaison directe et confortable en véhicule privé et climatisé de Marrakech vers Agadir ou Taghazout Bay. Prise en charge à l'adresse de votre choix et dépose exacte à votre hôtel, riad ou aéroport d'Agadir Al Massira.",
       en: "Direct, comfortable, and air-conditioned private transfer from Marrakech to Agadir or Taghazout. Door-to-door service with luggage assistance.",
@@ -554,7 +554,7 @@ const INITIAL_SERVICES_DATA = [
       es: "Ruta del Sur",
       ar: "طريق الجنوب"
     },
-    image: "assets/fire_show.jpg",
+    image: "assets/photo4.jpg",
     overview: {
       fr: "Transfert longue distance à travers le col du Tizi n'Tichka, Ouarzazate, Agdz et les palmeraies infinies de la Vallée du Draa jusqu'à Zagora.",
       en: "Long distance scenic transfer across the Tizi n'Tichka pass, Ouarzazate, Agdz, and the Draa Valley to Zagora.",
@@ -644,7 +644,7 @@ const INITIAL_SERVICES_DATA = [
       es: "A Medida",
       ar: "حسب طلبك"
     },
-    image: "assets/coastal_tower.jpg",
+    image: "assets/photo2.jpg",
     overview: {
       fr: "Besoin d'un transfert vers Essaouira, Taroudant, Ouarzazate, Rabat, Fès ou Chefchaouen ? Contactez Ayman sur WhatsApp pour obtenir immédiatement votre tarif sur-mesure au meilleur prix.",
       en: "Need a transfer to Essaouira, Taroudant, Rabat, Fes, or Tangier? Contact Ayman on WhatsApp for an immediate customized quote.",
@@ -692,7 +692,7 @@ const INITIAL_SERVICES_DATA = [
       es: "Centro / Medina",
       ar: "وسط المدينة"
     },
-    image: "assets/luxury_riad.jpg",
+    image: "assets/photo5.jpg",
     overview: {
       fr: "Transfert VIP privé entre l'Aéroport Marrakech-Ménara et la zone Centre (Médina, Guéliz, Hivernage, Agdal). Votre chauffeur vous attend avec un panneau à votre nom à la sortie du terminal, vous aide avec vos bagages et vous conduit directement à votre hébergement.",
       en: "Private VIP airport shuttle between Marrakech-Menara Airport and the city center (Medina, Gueliz, Hivernage, Agdal). Meet & greet with name board and luggage assistance.",

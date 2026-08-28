@@ -339,7 +339,7 @@ function handleAddServiceSubmit(e) {
   const titleFr = form.querySelector("#service-title-fr").value;
   const duration = form.querySelector("#service-duration").value || "1 Jour";
   const priceEUR = Number(form.querySelector("#service-price").value) || 100;
-  const image = form.querySelector("#service-image").value || "assets/fire_show.jpg";
+  const image = form.querySelector("#service-image").value || "assets/photo4.jpg";
   const overview = form.querySelector("#service-overview").value;
 
   const newService = {
