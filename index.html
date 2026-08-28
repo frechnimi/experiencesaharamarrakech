@@ -1,0 +1,471 @@
+<!DOCTYPE html>
+<html lang="fr" dir="ltr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Expérience Sahara Marrakech | Excursions Privées, Circuits Désert & Transferts VIP</title>
+  <meta name="description" content="Véhicule privé (jusqu'à 7 places) avec chauffeur professionnel pour vos excursions depuis Marrakech, circuits désert Zagora & Merzouga, transferts inter-villes et navettes aéroport. Réservation directe sans paiement en ligne." />
+  
+  <!-- Favicon & Brand Icon -->
+  <link rel="icon" type="image/jpeg" href="assets/logo.jpg" />
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400..700;1,9..40,400..700&family=Playfair+Display:ital,wght@0,500..800;1,500..800&family=Tajawal:wght@400;500;700;800&display=swap" rel="stylesheet" />
+
+  <!-- Font Awesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+  <!-- Top Contact & Selector Bar -->
+  <div class="top-bar">
+    <div class="container top-bar-inner">
+      <div class="top-contact">
+        <a href="tel:+212649252133"><i class="fa fa-phone-alt"></i> +212 649 252 133</a>
+        <a href="mailto:Experiencesaharamarrakech@gmail.com"><i class="fa fa-envelope"></i> Experiencesaharamarrakech@gmail.com</a>
+        <a href="https://wa.me/212649252133" target="_blank"><i class="fab fa-whatsapp"></i> WhatsApp Direct (Ayman)</a>
+        <a href="https://www.instagram.com/marrakech_sahara_experience" target="_blank" rel="noopener" style="color: #e1306c;"><i class="fab fa-instagram"></i> @marrakech_sahara_experience</a>
+      </div>
+      <div class="top-controls">
+        <!-- Language Selector -->
+        <select id="lang-select" class="select-picker" aria-label="Language Selector">
+          <option value="fr">🇫🇷 Français</option>
+          <option value="en">🇬🇧 English</option>
+          <option value="es">🇪🇸 Español</option>
+          <option value="ar">🇲🇦 العربية</option>
+        </select>
+
+        <!-- Currency Selector -->
+        <select id="curr-select" class="select-picker" aria-label="Currency Selector">
+          <option value="EUR">€ EUR</option>
+          <option value="MAD">DH MAD</option>
+          <option value="USD">$ USD</option>
+          <option value="GBP">£ GBP</option>
+        </select>
+
+        <!-- Admin Portal Link -->
+        <a href="admin.html" target="_blank" class="admin-nav-btn">
+          <i class="fa fa-cog"></i> <span data-i18n="nav_admin">Espace Gestion</span>
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Main Navigation Header -->
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="#" class="logo-wrap">
+        <img src="assets/logo.jpg" alt="Expérience Sahara Marrakech Logo" class="logo-img" />
+        <div class="logo-text">
+          <span class="logo-brand">Expérience Sahara <span>Marrakech</span></span>
+          <span class="logo-tagline" data-i18n="brand_tagline">Excursions, Circuits & Transferts VIP</span>
+        </div>
+      </a>
+
+      <!-- Navigation Menu -->
+      <nav>
+        <ul id="nav-menu" class="nav-menu">
+          <li><a href="#hero" class="nav-link active" data-i18n="nav_home">Accueil</a></li>
+          <li><a href="#excursions" class="nav-link" data-i18n="nav_excursions">1. Excursions</a></li>
+          <li><a href="#circuits" class="nav-link" data-i18n="nav_circuits">2. Circuits Désert</a></li>
+          <li><a href="#intercity" class="nav-link" data-i18n="nav_transfers_city">3. Inter-Villes</a></li>
+          <li><a href="#airport" class="nav-link" data-i18n="nav_transfers_airport">4. Transfert Aéroport</a></li>
+          <li><a href="#custom-quote" class="nav-link" data-i18n="nav_tailormade">Sur-Mesure</a></li>
+          <li>
+            <a href="https://wa.me/212649252133" target="_blank" class="header-cta-btn">
+              <i class="fab fa-whatsapp"></i> <span data-i18n="nav_book_now">WhatsApp (0649252133)</span>
+            </a>
+          </li>
+        </ul>
+      </nav>
+
+      <button id="mobile-nav-toggle" class="mobile-nav-toggle" aria-label="Menu Mobile">
+        <i class="fa fa-bars"></i>
+      </button>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section id="hero" class="hero-section">
+    <div class="hero-overlay"></div>
+    <div class="container">
+      <div class="hero-content">
+        <div class="hero-badge" data-i18n="hero_badge">
+          ✨ Véhicule Privé Tout Confort (Jusqu'à 7 Personnes) & Chauffeur Dédié
+        </div>
+        <h1 class="hero-title">
+          <span data-i18n="hero_title_1">Expérience Sahara Marrakech</span><br />
+          <span data-i18n="hero_title_2">Excursions, Circuits & Transferts</span>
+        </h1>
+        <p class="hero-subtitle" data-i18n="hero_subtitle">
+          Découvrez le meilleur du Maroc en toute liberté : excursions privées au départ de Marrakech, circuits dans le désert (Zagora & Merzouga), transferts inter-villes et navettes aéroport VIP.
+        </p>
+        <div class="hero-actions">
+          <a href="#excursions" class="btn btn-primary" data-i18n="hero_cta_explore">
+            <i class="fa fa-car"></i> Voir Nos Prestations
+          </a>
+          <a href="#custom-quote" class="btn btn-outline" data-i18n="hero_cta_custom">
+            <i class="fab fa-whatsapp"></i> Demander un Devis WhatsApp
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Service Search & Filter -->
+  <section class="container search-bar-wrap">
+    <div class="search-box">
+      <form id="search-form" class="search-form">
+        <div class="search-field">
+          <label for="search-keywords" data-i18n="search_keywords_label">
+            <i class="fa fa-search"></i> Rechercher une prestation
+          </label>
+          <div class="search-input-wrap">
+            <input type="text" id="search-keywords" data-i18n-placeholder="search_keywords_placeholder" placeholder="Ex: Ouarzazate, Agafay, Ourika, Zagora, Merzouga, Agadir, Aéroport..." />
+          </div>
+        </div>
+
+        <div class="search-field">
+          <label for="search-category" data-i18n="search_category_label">
+            <i class="fa fa-layer-group"></i> Catégorie de Service
+          </label>
+          <div class="search-input-wrap">
+            <select id="search-category">
+              <option value="" data-i18n="search_category_all">Tous les services</option>
+              <option value="excursions" data-i18n="search_category_excursions">1. Excursions Privées (Départ Marrakech)</option>
+              <option value="circuits" data-i18n="search_category_circuits">2. Circuits Privés (Désert)</option>
+              <option value="intercity" data-i18n="search_category_intercity">3. Transferts Inter-Villes</option>
+              <option value="airport" data-i18n="search_category_airport">4. Transferts Aéroport Marrakech</option>
+            </select>
+          </div>
+        </div>
+
+        <button type="submit" class="btn-search">
+          <i class="fa fa-search"></i> <span data-i18n="search_btn">Rechercher</span>
+        </button>
+
+        <button type="button" onclick="resetSearch()" class="btn-action-view" style="height: 46px; padding: 0 1rem;">
+          <i class="fa fa-redo"></i>
+        </button>
+      </form>
+    </div>
+  </section>
+
+  <!-- Trust Features Grid -->
+  <section class="trust-section">
+    <div class="container trust-grid">
+      <div class="trust-card">
+        <div class="trust-icon"><i class="fa fa-users"></i></div>
+        <div class="trust-info">
+          <h3 data-i18n="trust_vehicle_title">Véhicule Privé (7 Places)</h3>
+          <p data-i18n="trust_vehicle_desc">Minivans & 4x4 récents, climatisés et spacieux pour votre groupe ou famille.</p>
+        </div>
+      </div>
+      <div class="trust-card">
+        <div class="trust-icon"><i class="fa fa-user-tie"></i></div>
+        <div class="trust-info">
+          <h3 data-i18n="trust_driver_title">Chauffeur Professionnel</h3>
+          <p data-i18n="trust_driver_desc">Chauffeurs locaux expérimentés, ponctuels, courtois et multilingues.</p>
+        </div>
+      </div>
+      <div class="trust-card">
+        <div class="trust-icon"><i class="fa fa-hand-holding-usd"></i></div>
+        <div class="trust-info">
+          <h3 data-i18n="trust_price_title">Tarif Global & Transparent</h3>
+          <p data-i18n="trust_price_desc">Tarif direct par véhicule avec carburant et péages inclus. Zéro surprise.</p>
+        </div>
+      </div>
+      <div class="trust-card">
+        <div class="trust-icon"><i class="fab fa-whatsapp"></i></div>
+        <div class="trust-info">
+          <h3 data-i18n="trust_nopay_title">Sans Paiement en Ligne</h3>
+          <p data-i18n="trust_nopay_desc">Aucune carte bancaire requise. Réservez et échangez directement sur WhatsApp avec Ayman.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div id="services-container">
+    <!-- ==========================================================================
+         SECTION 1: EXCURSIONS PRIVÉES (DÉPART MARRAKECH)
+         ========================================================================== -->
+    <section id="excursions" class="section">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-badge" data-i18n="sec_excursions_badge">DÉPART MARRAKECH</span>
+          <h2 class="section-title" data-i18n="sec_excursions_title">1. Excursions Privées d'une Journée</h2>
+          <p class="section-subtitle" data-i18n="sec_excursions_subtitle">
+            Véhicule privé climatisé (jusqu'à 7 places) avec chauffeur à votre disposition exclusive pour la journée.
+          </p>
+        </div>
+        <div id="excursions-grid" class="services-grid">
+          <!-- Injected by app.js -->
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         SECTION 2: CIRCUITS PRIVÉS DÉSERT (ZAGORA & MERZOUGA)
+         ========================================================================== -->
+    <section id="circuits" class="section section-alt">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-badge" data-i18n="sec_circuits_badge">AVENTURE DÉSERT</span>
+          <h2 class="section-title" data-i18n="sec_circuits_title">2. Circuits Privés au Sahara (2 & 3 Jours)</h2>
+          <p class="section-subtitle" data-i18n="sec_circuits_subtitle">
+            Tarif global véhicule privé + chauffeur dédié pour vivre la magie de Zagora et Merzouga (hébergement non inclus / libre).
+          </p>
+        </div>
+        <div id="circuits-grid" class="services-grid">
+          <!-- Injected by app.js -->
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         SECTION 3: TRANSFERTS INTER-VILLES (ALLER SIMPLE)
+         ========================================================================== -->
+    <section id="intercity" class="section">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-badge" data-i18n="sec_intercity_badge">ALLER SIMPLE / RETOUR</span>
+          <h2 class="section-title" data-i18n="sec_intercity_title">3. Transferts Inter-Villes Privés</h2>
+          <p class="section-subtitle" data-i18n="sec_intercity_subtitle">
+            Liaisons directes, confortables et sécurisées entre Marrakech et les grandes villes du Maroc en véhicule privé (jusqu'à 7 places).
+          </p>
+        </div>
+        <div id="intercity-grid" class="services-grid">
+          <!-- Injected by app.js -->
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         SECTION 4: TRANSFERTS AÉROPORT MARRAKECH-MÉNARA
+         ========================================================================== -->
+    <section id="airport" class="section section-alt">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-badge" data-i18n="sec_airport_badge">AÉROPORT MARRAKECH-MÉNARA</span>
+          <h2 class="section-title" data-i18n="sec_airport_title">4. Navettes & Transferts Aéroport VIP</h2>
+          <p class="section-subtitle" data-i18n="sec_airport_subtitle">
+            Accueil personnalisé avec pancarte à votre nom à l'arrivée et transfert direct sans attente vers votre hôtel ou riad.
+          </p>
+        </div>
+        <div id="airport-grid" class="services-grid">
+          <!-- Injected by app.js -->
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <!-- Custom Quote Request Wizard -->
+  <section id="custom-quote" class="section custom-section">
+    <div class="container custom-container">
+      <div class="custom-info">
+        <span class="section-badge" style="background: rgba(200, 157, 60, 0.25); color: #fef08a;" data-i18n="custom_section_badge">
+          DEMANDE PERSONNALISÉE
+        </span>
+        <h2 data-i18n="custom_section_title">Besoin d'un Trajet Spécifique ou d'un Circuit Sur-Mesure ?</h2>
+        <p data-i18n="custom_section_subtitle">
+          Indiquez-nous votre itinéraire, date et nombre de passagers. Ayman vous répondra directement sur WhatsApp en quelques minutes.
+        </p>
+        <ul class="custom-perks">
+          <li><i class="fa fa-check"></i> Véhicules Privés Récents & Climatisés (1 à 7 Places)</li>
+          <li><i class="fa fa-check"></i> Sans Paiement en Ligne (Paiement sur Place)</li>
+          <li><i class="fa fa-check"></i> Prise en Charge à l'Aéroport, Riad ou Hôtel</li>
+          <li><i class="fa fa-check"></i> Devis Rapide et Gratuit sur WhatsApp (+212 649 252 133)</li>
+        </ul>
+      </div>
+
+      <div class="custom-form-card">
+        <form id="custom-quote-form">
+          <div class="custom-form-grid">
+            <div class="form-group-full">
+              <label for="custom-service-type" data-i18n="custom_label_service_type">Type de prestation souhaitée :</label>
+              <select id="custom-service-type">
+                <option value="Excursion Privée d'un Jour" selected>1. Excursion Privée d'un Jour</option>
+                <option value="Circuit Désert (Zagora ou Merzouga)">2. Circuit Privé au Désert (2 ou 3 Jours)</option>
+                <option value="Transfert Inter-Villes">3. Transfert Inter-Villes (Agadir, Casa, etc.)</option>
+                <option value="Transfert Aéroport Marrakech">4. Transfert Aéroport Marrakech-Ménara</option>
+                <option value="Mise à Disposition Sur-Mesure">Mise à Disposition Journée / Séjour</option>
+              </select>
+            </div>
+
+            <div>
+              <label for="custom-departure" data-i18n="custom_label_departure">Lieu de départ :</label>
+              <input type="text" id="custom-departure" placeholder="Ex: Marrakech, Hôtel, Aéroport..." required />
+            </div>
+
+            <div>
+              <label for="custom-destination" data-i18n="custom_label_destination">Destination souhaitée :</label>
+              <input type="text" id="custom-destination" placeholder="Ex: Ouarzazate, Agafay, Agadir..." required />
+            </div>
+
+            <div>
+              <label for="custom-date" data-i18n="custom_label_date">Date du voyage :</label>
+              <input type="date" id="custom-date" required />
+            </div>
+
+            <div>
+              <label for="custom-passengers" data-i18n="custom_label_passengers">Nombre de passagers (max 7) :</label>
+              <select id="custom-passengers">
+                <option value="1 à 2 Passagers">1 à 2 Passagers</option>
+                <option value="3 à 4 Passagers" selected>3 à 4 Passagers</option>
+                <option value="5 à 7 Passagers">5 à 7 Passagers (Groupe/Famille)</option>
+              </select>
+            </div>
+
+            <div>
+              <label for="custom-name" data-i18n="custom_label_name">Votre Nom :</label>
+              <input type="text" id="custom-name" placeholder="Ex: Marc Dupont" required />
+            </div>
+
+            <div>
+              <label for="custom-phone" data-i18n="custom_label_phone">Votre WhatsApp / Téléphone :</label>
+              <input type="tel" id="custom-phone" placeholder="Ex: +33 6 12 34 56 78" required />
+            </div>
+
+            <div class="form-group-full">
+              <label for="custom-notes" data-i18n="custom_label_notes">Remarques / Horaires de vol :</label>
+              <textarea id="custom-notes" rows="2" placeholder="Numéro de vol, heure de prise en charge, demandes particulières..."></textarea>
+            </div>
+
+            <div class="form-group-full">
+              <button type="submit" class="btn btn-primary" style="width: 100%; background: #25d366; border-color: #25d366; font-size: 1.05rem;">
+                <i class="fab fa-whatsapp"></i> <span data-i18n="custom_submit_btn">Envoyer ma Demande sur WhatsApp</span>
+              </button>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div class="footer-brand">
+        <div class="logo-wrap" style="margin-bottom: 1rem;">
+          <img src="assets/logo.jpg" alt="Logo" class="logo-img" style="background: #fff; padding: 2px;" />
+          <div class="logo-text">
+            <span class="logo-brand" style="color: #fff;">Expérience Sahara <span style="color: var(--gold);">Marrakech</span></span>
+          </div>
+        </div>
+        <p data-i18n="footer_about_text">
+          Expérience Sahara Marrakech met à votre disposition des véhicules privés confortables (jusqu'à 7 places) avec chauffeur professionnel pour vos excursions, circuits dans le désert et transferts à travers tout le Maroc.
+        </p>
+        <div class="footer-socials">
+          <a href="https://wa.me/212649252133" class="social-icon" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+          <a href="tel:+212649252133" class="social-icon" aria-label="Téléphone"><i class="fa fa-phone"></i></a>
+          <a href="mailto:Experiencesaharamarrakech@gmail.com" class="social-icon" aria-label="Email"><i class="fa fa-envelope"></i></a>
+          <a href="https://www.instagram.com/marrakech_sahara_experience" target="_blank" rel="noopener" class="social-icon" aria-label="Instagram" style="color: #e1306c;"><i class="fab fa-instagram"></i></a>
+        </div>
+      </div>
+
+      <div class="footer-col">
+        <h4 data-i18n="footer_quick_links">Accès Rapide</h4>
+        <ul class="footer-links">
+          <li><a href="#hero" data-i18n="nav_home">Accueil</a></li>
+          <li><a href="#excursions" data-i18n="nav_excursions">1. Excursions Privées</a></li>
+          <li><a href="#circuits" data-i18n="nav_circuits">2. Circuits Désert</a></li>
+          <li><a href="#intercity" data-i18n="nav_transfers_city">3. Transferts Inter-Villes</a></li>
+          <li><a href="#airport" data-i18n="nav_transfers_airport">4. Transfert Aéroport</a></li>
+          <li><a href="admin.html" target="_blank"><i class="fa fa-lock"></i> <span data-i18n="nav_admin">Espace Gestion</span></a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4 data-i18n="footer_services">Prestations Clés</h4>
+        <ul class="footer-links">
+          <li><a href="#excursions">Marrakech → Ouarzazate</a></li>
+          <li><a href="#excursions">Marrakech → Agafay</a></li>
+          <li><a href="#excursions">Marrakech → Vallée de l'Ourika</a></li>
+          <li><a href="#excursions">Circuit des 3 Vallées</a></li>
+          <li><a href="#circuits">Circuit 2 Jours Zagora</a></li>
+          <li><a href="#circuits">Circuit 3 Jours Merzouga</a></li>
+          <li><a href="#airport">Navette Aéroport VIP</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4 data-i18n="footer_secure_payment">Contact Direct & Réservation</h4>
+        <p style="font-size: 0.88rem; line-height: 1.6;" data-i18n="footer_secure_text">
+          Zéro paiement en ligne. Vous réservez en toute simplicité et payez directement sur place.
+        </p>
+        <div style="margin-top: 1rem; font-size: 0.9rem; color: #e2e8f0; display: flex; flex-direction: column; gap: 0.5rem;">
+          <div><i class="fab fa-whatsapp" style="color: #25d366;"></i> <strong>WhatsApp :</strong> +212 649 252 133</div>
+          <div><i class="fa fa-envelope" style="color: var(--gold);"></i> <strong>Email :</strong> Experiencesaharamarrakech@gmail.com</div>
+          <div><i class="fab fa-instagram" style="color: #e1306c;"></i> <strong>Instagram :</strong> <a href="https://www.instagram.com/marrakech_sahara_experience" target="_blank" style="color: #e1306c;">@marrakech_sahara_experience</a></div>
+          <div><i class="fa fa-car" style="color: #10b981;"></i> <strong>Capacité :</strong> Véhicules privés 7 places</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <div class="container">
+        <p data-i18n="footer_rights">Copyright © 2026 Expérience Sahara Marrakech. Tous droits réservés.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Floating WhatsApp CTA Button -->
+  <a href="https://wa.me/212649252133?text=Bonjour%20Ayman!%20Je%20souhaite%20me%20renseigner%20sur%20vos%20excursions%20et%20transferts." target="_blank" class="floating-whatsapp" aria-label="WhatsApp">
+    <i class="fab fa-whatsapp"></i>
+    <span data-i18n="whatsapp_chat_text">WhatsApp Direct (0649252133)</span>
+  </a>
+
+  <!-- Interactive Service Modal -->
+  <div id="service-modal" class="modal-overlay" role="dialog" aria-modal="true">
+    <div class="modal-container">
+      <button class="modal-close-btn" onclick="closeModal()" aria-label="Fermer">
+        <i class="fa fa-times"></i>
+      </button>
+      <div id="service-modal-body">
+        <!-- Injected dynamically by app.js -->
+      </div>
+    </div>
+  </div>
+
+  <!-- Scripts -->
+  <script src="js/tours-data.js"></script>
+  <script src="js/translations.js"></script>
+  <script src="js/app.js"></script>
+
+  <!-- Google Maps Places Autocomplete (Maroc focus) -->
+  <script>
+    window.initPlacesAutocomplete = function() {
+      const input = document.getElementById("search-keywords");
+      if (!input || typeof google === "undefined") return;
+
+      const autocomplete = new google.maps.places.Autocomplete(input, {
+        types: ["geocode", "establishment"],
+        componentRestrictions: { country: "ma" }, // Maroc uniquement
+        fields: ["name", "formatted_address"]
+      });
+
+      autocomplete.addListener("place_changed", function() {
+        const place = autocomplete.getPlace();
+        const name = place.name || place.formatted_address || "";
+        input.value = name;
+        // Déclencher la recherche automatiquement
+        const form = document.getElementById("search-form");
+        if (form) {
+          const event = new Event("submit", { bubbles: true, cancelable: true });
+          form.dispatchEvent(event);
+        }
+      });
+    };
+  </script>
+  <script
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDYHqjYkwXvxaU3sN0aW_2H_LS4x7mCbBw&libraries=places&callback=initPlacesAutocomplete"
+    async
+    defer
+  ></script>
+</body>
+</html>

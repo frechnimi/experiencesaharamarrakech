@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="fr" dir="ltr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Espace Gestion & Grille Tarifaire | Expérience Sahara Marrakech</title>
+  
+  <!-- Favicon -->
+  <link rel="icon" type="image/jpeg" href="assets/logo.jpg" />
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400..700;1,9..40,400..700&family=Playfair+Display:ital,wght@0,500..800;1,500..800&family=Tajawal:wght@400;500;700;800&display=swap" rel="stylesheet" />
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body class="admin-body">
+
+  <!-- Admin Navigation Bar -->
+  <header class="admin-navbar">
+    <div class="container admin-navbar-inner">
+      <div style="display: flex; align-items: center; gap: 1rem;">
+        <img src="assets/logo.jpg" alt="Logo" style="height: 48px; border-radius: 8px; background: #fff; padding: 2px;" />
+        <div>
+          <h2 style="font-family: var(--font-heading); font-size: 1.25rem; font-weight: 700; margin: 0; color: #fff;">
+            Expérience Sahara <span style="color: var(--gold);">Marrakech</span>
+          </h2>
+          <span style="font-size: 0.75rem; color: #cbd5e1; text-transform: uppercase; letter-spacing: 1px;">Gestion des Prestations & Réservations</span>
+        </div>
+      </div>
+
+      <div class="admin-nav-links">
+        <a href="#section-reservations" class="admin-nav-item active"><i class="fa fa-calendar-check"></i> Réservations</a>
+        <a href="#section-services" class="admin-nav-item"><i class="fa fa-car"></i> Grille Tarifaire & Services</a>
+        <a href="index.html" target="_blank" class="admin-nav-item" style="background: rgba(255,255,255,0.1);"><i class="fa fa-external-link-alt"></i> Voir le Site</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Main Content -->
+  <main class="container" style="padding-top: 2rem; padding-bottom: 4rem;">
+
+    <!-- KPI Statistics -->
+    <section class="admin-kpi-grid">
+      <div class="kpi-card">
+        <div class="kpi-icon gold"><i class="fa fa-calendar-alt"></i></div>
+        <div class="kpi-info">
+          <h4>Total Demandes & Réservations</h4>
+          <div id="kpi-total-bookings" class="kpi-value">0</div>
+        </div>
+      </div>
+
+      <div class="kpi-card">
+        <div class="kpi-icon emerald"><i class="fa fa-coins"></i></div>
+        <div class="kpi-info">
+          <h4>Chiffre d'Affaires Confirmé</h4>
+          <div id="kpi-revenue" class="kpi-value">0 €</div>
+        </div>
+      </div>
+
+      <div class="kpi-card">
+        <div class="kpi-icon blue"><i class="fa fa-clock"></i></div>
+        <div class="kpi-info">
+          <h4>Demandes en Attente</h4>
+          <div id="kpi-pending" class="kpi-value">0</div>
+        </div>
+      </div>
+
+      <div class="kpi-card">
+        <div class="kpi-icon purple"><i class="fa fa-car-side"></i></div>
+        <div class="kpi-info">
+          <h4>Prestations au Catalogue</h4>
+          <div id="kpi-active-tours" class="kpi-value">0</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 1: Gestion des Réservations -->
+    <section id="section-reservations" class="admin-card">
+      <div class="admin-card-header">
+        <h3 class="admin-card-title">
+          <i class="fa fa-clipboard-list" style="color: var(--gold);"></i> Demandes de Réservation & Clients
+        </h3>
+
+        <div class="admin-controls">
+          <input type="text" id="res-search-input" class="admin-search-input" placeholder="🔍 Rechercher client, téléphone..." />
+          
+          <button class="btn btn-primary" onclick="openAdminModal('modal-manual-booking')" style="padding: 0.45rem 0.9rem; font-size: 0.85rem;">
+            <i class="fa fa-plus-circle"></i> Ajouter Réservation
+          </button>
+
+          <button class="btn btn-outline" onclick="exportReservationsCSV()" style="padding: 0.45rem 0.9rem; font-size: 0.85rem; color: var(--primary); border-color: var(--border-color); background: #f8fafc;">
+            <i class="fa fa-file-csv"></i> Exporter CSV
+          </button>
+        </div>
+      </div>
+
+      <!-- Filters -->
+      <div style="display: flex; gap: 0.5rem; margin-bottom: 1.25rem; flex-wrap: wrap;">
+        <button class="filter-btn res-filter-btn active" data-status="all">Toutes</button>
+        <button class="filter-btn res-filter-btn" data-status="pending">⏳ En attente</button>
+        <button class="filter-btn res-filter-btn" data-status="confirmed">✅ Confirmées</button>
+        <button class="filter-btn res-filter-btn" data-status="completed">🎉 Terminées</button>
+        <button class="filter-btn res-filter-btn" data-status="cancelled">❌ Annulées</button>
+      </div>
+
+      <!-- Table -->
+      <div class="table-responsive">
+        <table class="data-table">
+          <thead>
+            <tr>
+              <th>ID</th>
+              <th>Client</th>
+              <th>Prestation & Véhicule</th>
+              <th>Date</th>
+              <th>Passagers</th>
+              <th>Tarif (EUR)</th>
+              <th>Statut</th>
+              <th>Actions</th>
+            </tr>
+          </thead>
+          <tbody id="reservations-tbody">
+            <!-- Injected by js/admin.js -->
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <!-- SECTION 2: Grille Tarifaire & Prestations (4 Catégories) -->
+    <section id="section-services" class="admin-card">
+      <div class="admin-card-header">
+        <h3 class="admin-card-title">
+          <i class="fa fa-tags" style="color: var(--gold);"></i> Grille Tarifaire des Prestations (Véhicule 7 Places)
+        </h3>
+
+        <div class="admin-controls">
+          <input type="text" id="tour-search-input" class="admin-search-input" placeholder="🔍 Filtrer les prestations..." />
+          
+          <button class="btn btn-primary" onclick="openAdminModal('modal-add-tour')" style="padding: 0.45rem 0.9rem; font-size: 0.85rem;">
+            <i class="fa fa-plus"></i> Nouvelle Prestation
+          </button>
+        </div>
+      </div>
+
+      <!-- Table -->
+      <div class="table-responsive">
+        <table class="data-table">
+          <thead>
+            <tr>
+              <th>Aperçu</th>
+              <th>Intitulé de la Prestation</th>
+              <th>Catégorie</th>
+              <th>Durée / Trajet</th>
+              <th>Tarif Véhicule (EUR / DH)</th>
+              <th>Statut</th>
+              <th>Actions</th>
+            </tr>
+          </thead>
+          <tbody id="tours-tbody">
+            <!-- Injected by js/admin.js -->
+          </tbody>
+        </table>
+      </div>
+    </section>
+  </main>
+
+  <!-- MODAL: Add Manual Booking -->
+  <div id="modal-manual-booking" class="modal-overlay">
+    <div class="modal-container" style="max-width: 580px; padding: 2rem;">
+      <button class="modal-close-btn" onclick="closeAdminModal('modal-manual-booking')"><i class="fa fa-times"></i></button>
+      
+      <h3 style="font-family: var(--font-heading); color: var(--primary); margin-bottom: 1.5rem;">
+        <i class="fa fa-calendar-plus" style="color: var(--gold);"></i> Enregistrer une Réservation Manuelle
+      </h3>
+
+      <form id="manual-booking-form">
+        <div style="display: grid; gap: 1rem;">
+          <div>
+            <label style="font-size: 0.85rem; font-weight: 700; color: #475569;">Sélectionner la Prestation :</label>
+            <select id="manual-booking-tour" style="width: 100%; padding: 0.65rem; border: 1.5px solid var(--border-color); border-radius: 6px;" required>
+              <!-- Filled dynamically -->
+            </select>
+          </div>
+
+          <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem;">
+            <div>
+              <label style="font-size: 0.85rem; font-weight: 700; color: #475569;">Nom du Client :</label>
+              <input type="text" id="manual-client-name" placeholder="Ex: Thomas Martin" style="width: 100%; padding: 0.65rem; border: 1.5px solid var(--border-color); border-radius: 6px;" required />
+            </div>
+            <div>
+              <label style="font-size: 0.85rem; font-weight: 700; color: #475569;">Téléphone / WhatsApp :</label>
+              <input type="tel" id="manual-client-phone" placeholder="Ex: +33 6 12 34 56 78" style="width: 100%; padding: 0.65rem; border: 1.5px solid var(--border-color); border-radius: 6px;" required />
+            </div>
+          </div>
+
+          <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem;">
+            <div>
+              <label style="font-size: 0.85rem; font-weight: 700; color: #475569;">Date de la Prestation :</label>
+              <input type="date" id="manual-travel-date" style="width: 100%; padding: 0.65rem; border: 1.5px solid var(--border-color); border-radius: 6px;" required />
+            </div>
+            <div>
+              <label style="font-size: 0.85rem; font-weight: 700; color: #475569;">Nombre de Passagers :</label>
+              <input type="number" id="manual-travelers" min="1" max="7" value="2" style="width: 100%; padding: 0.65rem; border: 1.5px solid var(--border-color); border-radius: 6px;" required />
+            </div>
+          </div>
+
+          <div>
+            <label style="font-size: 0.85rem; font-weight: 700; color: #475569;">Email (Optionnel) :</label>
+            <input type="email" id="manual-client-email" placeholder="client@email.com" style="width: 100%; padding: 0.65rem; border: 1.5px solid var(--border-color); border-radius: 6px;" />
+          </div>
+
+          <div>
+            <label style="font-size: 0.85rem; font-weight: 700; color: #475569;">Lieu de Prise en Charge / Notes :</label>
+            <textarea id="manual-notes" rows="2" style="width: 100%; padding: 0.65rem; border: 1.5px solid var(--border-color); border-radius: 6px;" placeholder="Hôtel, Riad, Numéro de vol..."></textarea>
+          </div>
+
+          <button type="submit" class="btn btn-primary" style="margin-top: 0.5rem; width: 100%;">
+            <i class="fa fa-check-circle"></i> Confirmer la Réservation
+          </button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <!-- MODAL: Add New Service -->
+  <div id="modal-add-tour" class="modal-overlay">
+    <div class="modal-container" style="max-width: 600px; padding: 2rem;">
+      <button class="modal-close-btn" onclick="closeAdminModal('modal-add-tour')"><i class="fa fa-times"></i></button>
+      
+      <h3 style="font-family: var(--font-heading); color: var(--primary); margin-bottom: 1.5rem;">
+        <i class="fa fa-car" style="color: var(--gold);"></i> Ajouter une Prestation au Catalogue
+      </h3>
+
+      <form id="add-tour-form">
+        <div style="display: grid; gap: 1rem;">
+          <div>
+            <label style="font-size: 0.85rem; font-weight: 700; color: #475569;">Catégorie de Service :</label>
+            <select id="service-section" style="width: 100%; padding: 0.65rem; border: 1.5px solid var(--border-color); border-radius: 6px;">
+              <option value="excursions">1. Excursions Privées (Départ Marrakech)</option>
+              <option value="circuits">2. Circuits Privés (Désert)</option>
+              <option value="intercity">3. Transferts Inter-Villes (Aller Simple)</option>
+              <option value="airport">4. Transferts Aéroport Marrakech</option>
+            </select>
+          </div>
+
+          <div>
+            <label style="font-size: 0.85rem; font-weight: 700; color: #475569;">Intitulé du Trajet / Service :</label>
+            <input type="text" id="service-title-fr" placeholder="Ex: Marrakech → Taroudant" style="width: 100%; padding: 0.65rem; border: 1.5px solid var(--border-color); border-radius: 6px;" required />
+          </div>
+
+          <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem;">
+            <div>
+              <label style="font-size: 0.85rem; font-weight: 700; color: #475569;">Durée / Distance :</label>
+              <input type="text" id="service-duration" placeholder="Ex: 1 Journée / ~3h de route" style="width: 100%; padding: 0.65rem; border: 1.5px solid var(--border-color); border-radius: 6px;" required />
+            </div>
+            <div>
+              <label style="font-size: 0.85rem; font-weight: 700; color: #475569;">Tarif Véhicule (EUR) :</label>
+              <input type="number" id="service-price" min="10" max="2000" value="100" style="width: 100%; padding: 0.65rem; border: 1.5px solid var(--border-color); border-radius: 6px;" required />
+            </div>
+          </div>
+
+          <div>
+            <label style="font-size: 0.85rem; font-weight: 700; color: #475569;">URL de la Photo (Optionnel) :</label>
+            <input type="text" id="service-image" placeholder="assets/fire_show.jpg" style="width: 100%; padding: 0.65rem; border: 1.5px solid var(--border-color); border-radius: 6px;" />
+          </div>
+
+          <div>
+            <label style="font-size: 0.85rem; font-weight: 700; color: #475569;">Description & Détails de l'Itinéraire :</label>
+            <textarea id="service-overview" rows="3" style="width: 100%; padding: 0.65rem; border: 1.5px solid var(--border-color); border-radius: 6px;" placeholder="Points d'intérêt, pauses..." required></textarea>
+          </div>
+
+          <button type="submit" class="btn btn-primary" style="margin-top: 0.5rem; width: 100%;">
+            <i class="fa fa-save"></i> Enregistrer la Prestation
+          </button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <!-- Scripts -->
+  <script src="js/tours-data.js"></script>
+  <script src="js/admin.js"></script>
+</body>
+</html>
