@@ -5,8 +5,8 @@
  */
 
 const STORAGE_KEYS = {
-  SERVICES: "exp_sahara_services_catalog_v4",
-  RESERVATIONS: "exp_sahara_reservations_data_v4"
+  SERVICES: "exp_sahara_services_catalog_v5",
+  RESERVATIONS: "exp_sahara_reservations_data_v5"
 };
 
 const INITIAL_SERVICES_DATA = [
