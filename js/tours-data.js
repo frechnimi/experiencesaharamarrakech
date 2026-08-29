@@ -5,8 +5,8 @@
  */
 
 const STORAGE_KEYS = {
-  SERVICES: "exp_sahara_services_catalog_v5",
-  RESERVATIONS: "exp_sahara_reservations_data_v5"
+  SERVICES: "exp_sahara_services_catalog_v6",
+  RESERVATIONS: "exp_sahara_reservations_data_v6"
 };
 
 const INITIAL_SERVICES_DATA = [
@@ -236,7 +236,8 @@ const INITIAL_SERVICES_DATA = [
     rating: 5.0,
     reviewsCount: 215,
     status: "active",
-    image: "assets/photo3.jpg",
+    image: "assets/Essaouira1.jpeg",
+    gallery: ["assets/Essaouira1.jpeg", "assets/Essaouira2.jpeg", "assets/Essaouira3.jpeg", "assets/Essaouira4.jpeg"],
     badge: {
       fr: "Bord de Mer",
       en: "Coastal Jewel",
