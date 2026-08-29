@@ -5,8 +5,8 @@
  */
 
 const STORAGE_KEYS = {
-  SERVICES: "exp_sahara_services_catalog_v9",
-  RESERVATIONS: "exp_sahara_reservations_data_v9"
+  SERVICES: "exp_sahara_services_catalog_v10",
+  RESERVATIONS: "exp_sahara_reservations_data_v10"
 };
 
 const INITIAL_SERVICES_DATA = [
@@ -32,8 +32,8 @@ const INITIAL_SERVICES_DATA = [
       ar: "يوم كامل (07:30 – 19:00)"
     },
     capacity: "Véhicule privé (1 à 7 pers.)",
-    priceEUR: 120, // Tarif global par véhicule
-    priceMAD: 1300,
+    priceEUR: 150, // Tarif global par véhicule
+    priceMAD: 1620,
     rating: 5.0,
     reviewsCount: 142,
     status: "active",
@@ -184,8 +184,8 @@ const INITIAL_SERVICES_DATA = [
       ar: "يوم كامل (08:30 – 17:30)"
     },
     capacity: "Véhicule privé (1 à 7 pers.)",
-    priceEUR: 80,
-    priceMAD: 900,
+    priceEUR: 120,
+    priceMAD: 1296,
     rating: 4.9,
     reviewsCount: 110,
     status: "active",
@@ -492,8 +492,8 @@ const INITIAL_SERVICES_DATA = [
       ar: "ذهاب مباشر (~2h45 / 230 كم)"
     },
     capacity: "Véhicule privé (1 à 7 pers.)",
-    priceEUR: 100,
-    priceMAD: 1100,
+    priceEUR: 150,
+    priceMAD: 1620,
     rating: 5.0,
     reviewsCount: 95,
     status: "active",
@@ -542,8 +542,8 @@ const INITIAL_SERVICES_DATA = [
       ar: "ذهاب مباشر (~2h45 / 240 كم)"
     },
     capacity: "Véhicule privé (1 à 7 pers.)",
-    priceEUR: 110,
-    priceMAD: 1200,
+    priceEUR: 150,
+    priceMAD: 1620,
     rating: 4.9,
     reviewsCount: 130,
     status: "active",
