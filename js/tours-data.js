@@ -5,8 +5,8 @@
  */
 
 const STORAGE_KEYS = {
-  SERVICES: "exp_sahara_services_catalog_v8",
-  RESERVATIONS: "exp_sahara_reservations_data_v8"
+  SERVICES: "exp_sahara_services_catalog_v9",
+  RESERVATIONS: "exp_sahara_reservations_data_v9"
 };
 
 const INITIAL_SERVICES_DATA = [
@@ -38,7 +38,7 @@ const INITIAL_SERVICES_DATA = [
     reviewsCount: 142,
     status: "active",
     image: "assets/AitBenHaddou1.jpeg",
-    gallery: ["assets/AitBenHaddou1.jpeg", "assets/AitBenHaddou2.jpeg", "assets/Ouarzazate1.jpeg", "assets/Ouarzazate2.jpeg", "assets/Ouarzazate3.jpeg", "assets/TiziTichka.jpeg"],
+    gallery: ["assets/AitBenHaddou1.jpeg", "assets/AitBenHaddou2.jpeg", "assets/Ouarzazate1.jpeg", "assets/TiziTichka.jpeg"],
     badge: {
       fr: "Incontournable",
       en: "Must-See",
