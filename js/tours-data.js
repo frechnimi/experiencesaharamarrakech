@@ -5,8 +5,8 @@
  */
 
 const STORAGE_KEYS = {
-  SERVICES: "exp_sahara_services_catalog_v6",
-  RESERVATIONS: "exp_sahara_reservations_data_v6"
+  SERVICES: "exp_sahara_services_catalog_v7",
+  RESERVATIONS: "exp_sahara_reservations_data_v7"
 };
 
 const INITIAL_SERVICES_DATA = [
@@ -89,7 +89,8 @@ const INITIAL_SERVICES_DATA = [
     rating: 5.0,
     reviewsCount: 198,
     status: "active",
-    image: "assets/photo4.jpg",
+    image: "assets/Agafay1.jpeg",
+    gallery: ["assets/Agafay1.jpeg", "assets/Agafay2.jpeg", "assets/Agafay3.jpeg", "assets/Agafay4.jpeg"],
     badge: {
       fr: "Coup de Cœur",
       en: "Best-Seller",
