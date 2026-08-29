@@ -445,6 +445,7 @@ const INITIAL_SERVICES_DATA = [
       ar: "الصحراء الكبرى"
     },
     image: "https://images.unsplash.com/photo-1509316975850-ff9c5deb0cd9?auto=format&fit=crop&w=800&q=80",
+    gallery: ["assets/merzouga1.jpeg", "assets/merzouga2.jpeg", "assets/merzouga5.jpeg", "assets/merzouga7.jpeg"],
     overview: {
       fr: "Formule globale Véhicule Privé + Chauffeur professionnel dédié pour explorer les dunes géantes de Merzouga.\n\n• Jour 1 : Marrakech – Tizi n'Tichka – Kasbah Aït Ben Haddou – Ouarzazate – Vallée des Roses – Nuitée dans les Gorges du Dadès.\n• Jour 2 : Gorges du Dadès – Gorges du Todra – Erfoud – Rissani – Dunes de Merzouga Erg Chebbi (Coucher de soleil à dos de dromadaire et nuitée au Bivouac sous les étoiles).\n• Jour 3 : Lever de soleil sur les dunes de l'Erg Chebbi – Rissani – Vallée du Draa – Ouarzazate – Retour à Marrakech en soirée.",
       en: "Private Vehicle + Dedicated Professional Driver package to experience the giant dunes of Merzouga.\n\n• Day 1: Marrakech – Tizi n'Tichka – Ait Ben Haddou – Ouarzazate – Dades Gorges.\n• Day 2: Dades Gorges – Todra Gorges – Erfoud – Merzouga Erg Chebbi sunset camel ride and desert camp.\n• Day 3: Erg Chebbi sunrise – Draa Valley – Ouarzazate – Return to Marrakech.",

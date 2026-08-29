@@ -285,6 +285,9 @@ function openServiceModal(serviceId) {
     return `<details class="faq-item"><summary>${q}</summary><p>${a}</p></details>`;
   }).join("");
 
+  const gallery = item.gallery || [];
+  const galleryHTML = gallery.length ? `<div class="gallery-grid">${gallery.map(src => `<img src="${src}" alt="${title}" class="gallery-thumb" loading="lazy" onclick="openLightbox('${src}')">`).join("")}</div>` : "";
+
   modalBody.innerHTML = `
     <div class="modal-hero">
       <img src="${item.image}" alt="${title}" />
@@ -300,6 +303,8 @@ function openServiceModal(serviceId) {
     </div>
     <div class="modal-content">
       ${highlights.length ? `<div class="highlights-wrap">${highlightsHTML}</div>` : ""}
+
+      ${gallery.length ? `<h3 class="modal-section-title"><i class="fa fa-images" style="color: var(--gold);"></i> Galerie Photos (${gallery.length})</h3>${galleryHTML}` : ""}
 
       <h3 class="modal-section-title"><i class="fa fa-info-circle" style="color: var(--gold);"></i> Trip Overview</h3>
       <p style="font-size: 1.05rem; line-height: 1.7; margin-bottom: 1.5rem; white-space: pre-line;">
@@ -514,6 +519,31 @@ function setupEventListeners() {
   }
 
   document.addEventListener("keydown", (e) => {
-    if (e.key === "Escape") closeModal();
+    if (e.key === "Escape") { closeModal(); closeLightbox(); }
   });
+
+  // Lightbox click outside
+  const lb = document.getElementById("lightbox");
+  if (lb) {
+    lb.addEventListener("click", (e) => {
+      if (e.target === lb) closeLightbox();
+    });
+  }
+}
+
+function openLightbox(src) {
+  const lb = document.getElementById("lightbox");
+  const img = document.getElementById("lightbox-img");
+  if (lb && img) {
+    img.src = src;
+    lb.classList.add("active");
+    document.body.style.overflow = "hidden";
+  }
+}
+function closeLightbox() {
+  const lb = document.getElementById("lightbox");
+  if (lb) {
+    lb.classList.remove("active");
+    document.body.style.overflow = "auto";
+  }
 }
