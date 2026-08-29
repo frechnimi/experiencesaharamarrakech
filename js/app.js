@@ -11,6 +11,7 @@ let searchCategory = "";
 
 const WHATSAPP_PHONE = "212649252133";
 const COMPANY_EMAIL = "Experiencesaharamarrakech@gmail.com";
+let carouselInterval = null;
 
 document.addEventListener("DOMContentLoaded", () => {
   initLanguage();
@@ -286,7 +287,13 @@ function openServiceModal(serviceId) {
   }).join("");
 
   const gallery = item.gallery || [];
-  const galleryHTML = gallery.length ? `<div class="gallery-grid">${gallery.map(src => `<img src="${src}" alt="${title}" class="gallery-thumb" loading="lazy" onclick="openLightbox('${src}')">`).join("")}</div>` : "";
+  const galleryHTML = gallery.length ? `
+    <div class="carousel-wrap">
+      <img id="carousel-img" src="${gallery[0]}" alt="${title}" class="carousel-img" onclick="openLightbox(document.getElementById('carousel-img').src)">
+      <div class="carousel-dots">${gallery.map((_, i) => `<span class="carousel-dot ${i===0?'active':''}"></span>`).join("")}</div>
+      <div class="carousel-counter"><i class="fa fa-images"></i> ${gallery.length} photos — auto toutes les 2s</div>
+    </div>
+    <div class="gallery-grid">${gallery.map(src => `<img src="${src}" alt="${title}" class="gallery-thumb" loading="lazy" onclick="openLightbox('${src}')">`).join("")}</div>` : "";
 
   modalBody.innerHTML = `
     <div class="modal-hero">
@@ -364,6 +371,24 @@ function openServiceModal(serviceId) {
 
   modal.classList.add("active");
   document.body.style.overflow = "hidden";
+
+  // Auto carousel every 2s for the 4 Merzouga images
+  if (carouselInterval) clearInterval(carouselInterval);
+  if (gallery.length > 1) {
+    let idx = 0;
+    const galleryArr = [...gallery];
+    carouselInterval = setInterval(() => {
+      idx = (idx + 1) % galleryArr.length;
+      const cImg = document.getElementById("carousel-img");
+      if (!cImg) return;
+      cImg.style.opacity = "0.6";
+      setTimeout(() => {
+        cImg.src = galleryArr[idx];
+        cImg.style.opacity = "1";
+      }, 150);
+      document.querySelectorAll(".carousel-dot").forEach((d,i) => d.classList.toggle("active", i===idx));
+    }, 2000);
+  }
 }
 
 function closeModal() {
@@ -372,6 +397,7 @@ function closeModal() {
     modal.classList.remove("active");
     document.body.style.overflow = "auto";
   }
+  if (carouselInterval) { clearInterval(carouselInterval); carouselInterval = null; }
 }
 
 function sendDirectWhatsApp(serviceId) {

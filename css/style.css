@@ -1159,6 +1159,54 @@ button, input, select, textarea {
   .gallery-thumb { height: 140px; }
 }
 
+/* Carousel inside modal — auto 2s */
+.carousel-wrap {
+  position: relative;
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  margin-bottom: 0.85rem;
+  border: 2px solid var(--border-light);
+  background: #000;
+}
+.carousel-img {
+  width: 100%;
+  height: 380px;
+  object-fit: cover;
+  display: block;
+  cursor: pointer;
+  transition: opacity 0.3s ease;
+}
+.carousel-dots {
+  position: absolute;
+  bottom: 12px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 6px;
+}
+.carousel-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: rgba(255,255,255,0.5);
+  border: 1px solid rgba(255,255,255,0.8);
+  transition: var(--transition);
+}
+.carousel-dot.active { background: var(--gold); border-color: var(--gold); width: 22px; border-radius: 6px; }
+.carousel-counter {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: rgba(9,23,18,0.75);
+  color: #fff;
+  font-size: 0.72rem;
+  font-weight: 700;
+  padding: 0.25rem 0.55rem;
+  border-radius: var(--radius-full);
+  backdrop-filter: blur(4px);
+}
+@media (max-width: 768px) { .carousel-img { height: 240px; } }
+
 /* Lightbox overlay */
 .lightbox-overlay {
   position: fixed;

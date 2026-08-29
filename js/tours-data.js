@@ -444,7 +444,7 @@ const INITIAL_SERVICES_DATA = [
       es: "Gran Sahara",
       ar: "الصحراء الكبرى"
     },
-    image: "https://images.unsplash.com/photo-1509316975850-ff9c5deb0cd9?auto=format&fit=crop&w=800&q=80",
+    image: "assets/merzouga2.jpeg",
     gallery: ["assets/merzouga1.jpeg", "assets/merzouga2.jpeg", "assets/merzouga5.jpeg", "assets/merzouga7.jpeg"],
     overview: {
       fr: "Formule globale Véhicule Privé + Chauffeur professionnel dédié pour explorer les dunes géantes de Merzouga.\n\n• Jour 1 : Marrakech – Tizi n'Tichka – Kasbah Aït Ben Haddou – Ouarzazate – Vallée des Roses – Nuitée dans les Gorges du Dadès.\n• Jour 2 : Gorges du Dadès – Gorges du Todra – Erfoud – Rissani – Dunes de Merzouga Erg Chebbi (Coucher de soleil à dos de dromadaire et nuitée au Bivouac sous les étoiles).\n• Jour 3 : Lever de soleil sur les dunes de l'Erg Chebbi – Rissani – Vallée du Draa – Ouarzazate – Retour à Marrakech en soirée.",
@@ -648,7 +648,8 @@ const INITIAL_SERVICES_DATA = [
       es: "Gran Desierto",
       ar: "الصحراء الكبرى"
     },
-    image: "https://images.unsplash.com/photo-1509316975850-ff9c5deb0cd9?auto=format&fit=crop&w=800&q=80",
+    image: "assets/merzouga4.jpeg",
+    gallery: ["assets/merzouga3.jpeg", "assets/merzouga4.jpeg", "assets/merzouga6.jpeg", "assets/merzouga8.jpeg"],
     overview: {
       fr: "Transfert privé direct reliant Marrakech au cœur du Sahara à Merzouga (Erg Chebbi). Idéal pour rejoindre votre bivouac ou hôtel dans le désert en toute autonomie et confort.",
       en: "Direct private long-distance transfer from Marrakech to Merzouga (Erg Chebbi desert dunes) with door-to-camp drop-off.",
