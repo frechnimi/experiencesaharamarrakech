@@ -253,6 +253,10 @@ function openServiceModal(serviceId) {
   const duration = item.durationText ? (item.durationText[currentLang] || item.durationText.fr || item.durationText.en) : "";
   const overview = item.overview ? (item.overview[currentLang] || item.overview.fr || item.overview.en) : "";
   const formattedPrice = formatPrice(item.priceEUR);
+  const pickup = item.pickup ? (item.pickup[currentLang] || item.pickup.fr || item.pickup.en) : "";
+  const highlights = item.highlights || [];
+  const itinerary = item.itinerary || [];
+  const faq = item.faq || [];
 
   const includedHTML = (item.included || []).map((inc) => {
     const text = inc[currentLang] || inc.fr || inc.en;
@@ -264,6 +268,23 @@ function openServiceModal(serviceId) {
     return `<li><i class="fa fa-times-circle"></i> ${text}</li>`;
   }).join("");
 
+  const highlightsHTML = highlights.map((h) => {
+    const t = h[currentLang] || h.fr || h.en;
+    return `<span class="highlight-chip"><i class="fa fa-map-marker-alt"></i> ${t}</span>`;
+  }).join("");
+
+  const itineraryHTML = itinerary.map((step) => {
+    const t = step.title ? (step.title[currentLang] || step.title.fr || step.title.en) : `Jour ${step.day}`;
+    const d = step.desc ? (step.desc[currentLang] || step.desc.fr || step.desc.en) : "";
+    return `<div class="itinerary-step"><div class="itinerary-day">Jour ${step.day}</div><h4>${t}</h4><p>${d}</p></div>`;
+  }).join("");
+
+  const faqHTML = faq.map((f, idx) => {
+    const q = f.q ? (f.q[currentLang] || f.q.fr || f.q.en) : "";
+    const a = f.a ? (f.a[currentLang] || f.a.fr || f.a.en) : "";
+    return `<details class="faq-item"><summary>${q}</summary><p>${a}</p></details>`;
+  }).join("");
+
   modalBody.innerHTML = `
     <div class="modal-hero">
       <img src="${item.image}" alt="${title}" />
@@ -271,15 +292,25 @@ function openServiceModal(serviceId) {
         <h2 class="modal-hero-title">${title}</h2>
         <div class="modal-hero-meta">
           <span><i class="fa fa-clock"></i> ${duration}</span>
+          ${pickup ? `<span><i class="fa fa-clock"></i> Pickup: ${pickup}</span>` : ""}
           <span><i class="fa fa-users"></i> ${dict.capacity_badge || "Véhicule privé 7 places"}</span>
           <span><i class="fa fa-star" style="color: #fbbf24;"></i> ${item.rating} (${item.reviewsCount} avis)</span>
         </div>
       </div>
     </div>
     <div class="modal-content">
+      ${highlights.length ? `<div class="highlights-wrap">${highlightsHTML}</div>` : ""}
+
+      <h3 class="modal-section-title"><i class="fa fa-info-circle" style="color: var(--gold);"></i> Trip Overview</h3>
       <p style="font-size: 1.05rem; line-height: 1.7; margin-bottom: 1.5rem; white-space: pre-line;">
         ${overview}
       </p>
+
+      ${itinerary.length ? `
+      <h3 class="modal-section-title"><i class="fa fa-route" style="color: var(--gold);"></i> Detailed Itinerary</h3>
+      <div class="itinerary-timeline">
+        ${itineraryHTML}
+      </div>` : ""}
 
       <div class="modal-inc-exc-grid">
         <div>
@@ -300,7 +331,13 @@ function openServiceModal(serviceId) {
         </div>
       </div>
 
-      <div class="modal-inquiry-box" style="background: #fdfaf3; border: 2px solid var(--gold); border-radius: 12px; padding: 1.5rem;">
+      ${faq.length ? `
+      <h3 class="modal-section-title"><i class="fa fa-question-circle" style="color: var(--gold);"></i> FAQ — ${title}</h3>
+      <div class="faq-list">
+        ${faqHTML}
+      </div>` : ""}
+
+      <div class="modal-inquiry-box" style="background: #fdfaf3; border: 2px solid var(--gold); border-radius: 12px; padding: 1.5rem; margin-top: 1.5rem;">
         <div>
           <div style="font-size: 0.8rem; color: var(--gold-hover); text-transform: uppercase; font-weight: 700;">
             ${dict.from_price || "Tarif global par véhicule"}
